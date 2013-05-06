@@ -8,10 +8,21 @@
     <AssemblyName>Virmata</AssemblyName>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>162,168,169,219,414,649</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition.Codeplex">
-      <HintPath>..\..\..\..\thirdparty\System.ComponentModel.Composition.Codeplex.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\common\src\thirdparty\System.ComponentModel.Composition.Codeplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -32,7 +43,7 @@
       <Name>PluginInterfaces</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\src\core\Utils\Utils.csproj">
+    <ProjectReference Include="..\..\..\..\..\..\..\common\src\core\Utils\Utils.csproj">
       <Project>{C3773330-81FA-4253-823E-1BDE1529AA99}</Project>
       <Name>Utils</Name>
       <Private>False</Private>
