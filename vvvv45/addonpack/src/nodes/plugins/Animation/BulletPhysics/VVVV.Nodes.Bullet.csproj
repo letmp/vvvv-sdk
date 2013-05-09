@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BulletSharp">
-      <HintPath>Dependencies\$(Platform)\BulletSharp.dll</HintPath>
+	  <HintPath>..\..\..\..\..\..\..\common\src\thirdparty\$(Platform)\BulletSharp.dll</HintPath>
     </Reference>
     <Reference Include="SlimDX">
       <HintPath>..\..\..\..\..\..\..\common\src\thirdparty\$(Platform)\SlimDX.dll</HintPath>
