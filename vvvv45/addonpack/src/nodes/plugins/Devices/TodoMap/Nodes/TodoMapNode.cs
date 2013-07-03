@@ -130,11 +130,15 @@ namespace VVVV.TodoMap.Nodes
                     StreamReader sr = null;
                     try
                     {
+                        this.SuspendLayout();
                         sr = new StreamReader(path);
                         string xml = sr.ReadToEnd();
                         sr.Close();
 
+
+
                         this.FEngine.ClearVariables();
+
                         TodoXmlUnwrapper.LoadXml(this.FEngine, xml);
                     }
                     catch
@@ -143,6 +147,10 @@ namespace VVVV.TodoMap.Nodes
                         {
                             sr.Close();
                         }
+                    }
+                    finally
+                    {
+                        this.ResumeLayout(true);
                     }
                 }
             }
